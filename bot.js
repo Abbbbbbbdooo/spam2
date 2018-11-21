@@ -7,11 +7,18 @@ client.on('ready', () => {
 
 
 client.on('ready', async() => {
-var server = "510883625131311109"; // ايدي السررفر
+var server = "510883625131311109"; // ايدي السيرفر
 var channel = "510883625131311113";//ايدي الروم
     setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam ,  , Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam , Dalida Spam , ')
-    },400);
+    client.guilds.get(server).channels.get(channel).send('Verse Spam , Verse Spam , Verse Spam , Verse Spam , Verse Spam , Verse Spam , Verse Spam ,  , Verse Spam , Verse Spam , Verse Spam , Verse Spam , Verse Spam , Verse Spam , Verse Spam , **')  },400);
 })
 
-client.login("توكن البوت");
+client.on('message', message => {
+    let prefix = 'v1';
+   if(message.content.startsWith('v1say')) {
+       let args = message.content.split(' ').slice(1).join(' ');
+       message.channel.send(args)
+   } 
+});
+
+client.login( توكن البوت );
